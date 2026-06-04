@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ponto da Kombi</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Barlow:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="stars" id="stars" aria-hidden="true"></div>
+
+  <main class="page">
+
+    <header class="header">
+      <span class="moon" aria-hidden="true">🌙</span>
+
+      <div class="logo-circle">
+        <img src="./assets/pontodakombi.png" alt="Logo Ponto da Kombi">
+      </div>
+
+      <h1 class="logo-text">Ponto da Kombi</h1>
+      <p class="logo-sub">Luís de Elita</p>
+      <span class="address-badge">📍 Perto da Praça da Matriz</span>
+    </header>
+
+    <!-- ── Fale com a gente ── -->
+    <section class="links-section" aria-label="Contato">
+      <p class="section-title">Fale com a gente</p>
+
+      <!-- EDITE: coloque seu número (ex: 5585999999999) -->
+      <a class="link-card" href="https://wa.me/55SEUNUMERO" target="_blank" rel="noopener">
+        <div class="link-icon wpp" aria-hidden="true">
+          <img src="./assets/zap.png" alt="WhatsApp" class="icon-img">
+        </div>
+        <div class="link-text">
+          <p class="link-title">WhatsApp</p>
+          <p class="link-desc">Fale direto com a gente</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link-card" href="https://instagram.com/pontodakombi" target="_blank" rel="noopener">
+        <div class="link-icon ig" aria-hidden="true">
+          <img src="./assets/insta.png" alt="Instagram" class="icon-img">
+        </div>
+        <div class="link-text">
+          <p class="link-title">Instagram</p>
+          <p class="link-desc">Siga para novidades e fotos</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- ── Cardápio & Local ── -->
+    <section class="links-section" aria-label="Cardápio e localização">
+      <p class="section-title">Cardápio &amp; Local</p>
+
+      <!-- EDITE: link do cardápio (PDF, foto, iFood etc.) -->
+      <a class="link-card" href="#" target="_blank" rel="noopener">
+        <div class="link-icon cardapio" aria-hidden="true">🍔</div>
+        <div class="link-text">
+          <p class="link-title">Ver Cardápio</p>
+          <p class="link-desc">Hambúrgueres, petiscos e drinks</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+
+      <a class="link-card" href="https://maps.app.goo.gl/9T6DHvcGpZJ5KvBR7" target="_blank" rel="noopener">
+        <div class="link-icon map" aria-hidden="true">📍</div>
+        <div class="link-text">
+          <p class="link-title">Como Chegar</p>
+          <p class="link-desc">Perto da Praça da Matriz</p>
+        </div>
+        <span class="link-arrow" aria-hidden="true">›</span>
+      </a>
+    </section>
+
+    <div class="divider" aria-hidden="true"></div>
+
+    <!-- ── Horários ── -->
+    <section class="hours-wrapper" aria-label="Horário de funcionamento">
+      <p class="section-title">Horário de Funcionamento</p>
+
+      <div class="hours-card">
+        <div class="hours-row">
+          <span class="hours-day">Segunda</span>
+          <span class="hours-time closed">Fechado</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Terça à Sábado</span>
+          <span class="hours-time">18h – 00h</span>
+        </div>
+        <div class="hours-row">
+          <span class="hours-day">Domingo</span>
+          <span class="hours-time">17h – 23h</span>
+        </div>
+      </div>
+    </section>
+
+    <footer class="footer">
+      <span class="kombi-emoji" aria-hidden="true">🚐</span>
+      TE ESPERAMOS NA NOITE
+    </footer>
+
+  </main>
+
+  <script>
+    const container = document.getElementById('stars');
+    for (let i = 0; i < 60; i++) {
+      const star = document.createElement('div');
+      star.className = 'star';
+      const size = Math.random() * 2.5 + 0.5;
+      star.style.cssText = `
+        width:${size}px;
+        height:${size}px;
+        top:${Math.random() * 60}%;
+        left:${Math.random() * 100}%;
+        animation-delay:${(Math.random() * 3).toFixed(2)}s;
+        animation-duration:${(2 + Math.random() * 3).toFixed(2)}s;
+      `;
+      container.appendChild(star);
+    }
+  </script>
+
+</body>
+</html>
