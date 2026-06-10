@@ -11,7 +11,6 @@ body {
   overflow-x: hidden;
 }
 
-/* ── Estrelas ── */
 .stars {
   position: fixed;
   top: 0; left: 0;
@@ -32,7 +31,6 @@ body {
   to   { opacity: 0.9; transform: scale(1.4); }
 }
 
-/* ── Layout ── */
 .page {
   position: relative;
   z-index: 1;
@@ -42,7 +40,6 @@ body {
   padding: 0 0 56px;
 }
 
-/* ── Cabeçalho ── */
 .header {
   text-align: center;
   padding: 32px 24px 28px;
@@ -52,7 +49,7 @@ body {
 .back-btn {
   display: inline-block;
   color: #c8873a;
-  font-size: 13px;
+  font-size: 18px;
   font-weight: 600;
   text-decoration: none;
   letter-spacing: 0.5px;
@@ -114,7 +111,6 @@ body {
   font-weight: 600;
 }
 
-/* ── Seções do cardápio ── */
 .menu-section {
   padding: 0 20px;
   margin-bottom: 24px;
@@ -140,15 +136,14 @@ body {
   letter-spacing: 0.5px;
 }
 
-/* ── Card do menu ── */
 .menu-card {
   background: rgba(255, 255, 255, 0.04);
   border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 16px;
   overflow: hidden;
+
 }
 
-/* ── Item individual ── */
 .menu-item {
   display: flex;
   align-items: center;
@@ -164,7 +159,7 @@ body {
 }
 
 .menu-item:hover {
-  background: rgba(200, 135, 58, 0.07);
+  background: rgba(2, 0, 68, 0.508);
 }
 
 .item-info {
@@ -192,13 +187,11 @@ body {
   flex-shrink: 0;
 }
 
-/* ── Divisor entre seções ── */
 .menu-section + .menu-section {
   border-top: 1px solid rgba(26, 30, 98, 0.6);
   padding-top: 24px;
 }
 
-/* ── Rodapé ── */
 .footer {
   text-align: center;
   padding: 0 24px;
@@ -219,7 +212,6 @@ body {
   50%       { transform: translateX(10px); }
 }
 
-/* ── Responsividade ── */
 @media (max-width: 360px) {
   .logo-circle { width: 85px; height: 85px; }
   .menu-section { padding: 0 14px; }
